@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <!--cdn to icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!--Adding css-->
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    {% block extrahead %}{% endblock extrahead %}
+
+
+
+</head>
+<body>
+   <!--navbar section start--> 
+
+   <nav class="navbar">
+    <a href="/"><i class="fa fa-home"></i><span>HOME</span></a>
+    <a href="/about"><i class="fa fa-user"></i><span>ABOUT</span></a>
+    <a href="/portfolio"><i class="fa fa-briefcase"></i><span>PORTFOLIO</span></a>
+    <a href="/contact"><i class="fa fa-address-book"></i><span>CONTACT</span></a>   
+   </nav>
+
+   <!--navbar section ends--> 
+
+   {% block body %}{% endblock body %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% load static %}
+
+{% block body %}
+<section class="home">
+    <div class="image">
+        <img src="{% static 'images/user.jpg' %}" alt="">
+    </div>
+    <div class="content">
+        <h3>hi, I am Siddhesh Ninawe</h3>
+        <span>full-stack web developer</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim cumque adipisci sed maiores deserunt exercitationem harum cupiditate eos facilis incidunt.</p>
+        <a href="/about" class="btn">About me<i class="fa fa-user"></i></a>
+    </div>
+</section>
+
+{% endblock body %}

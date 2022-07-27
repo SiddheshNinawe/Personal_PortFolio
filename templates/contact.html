@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block title %}Contact{% endblock title %} 
+
+{% block body %}
+
+<!-- contact section starts  -->
+
+<section class="contact">
+  <h1 class="heading">contact <span>me</span></h1>
+
+  <div class="row">
+    <div class="info-container">
+      <h1>get in touch</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolorem
+        sunt sapiente vel minus eaque voluptate fugit corrupti omnis tempora?
+      </p>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fa fa-map"></i>
+          <div class="info">
+            <h3>address :</h3>
+            <p>Nagpur, india - 440013</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-envelope"></i>
+          <div class="info">
+            <h3>email :</h3>
+            <p>siddheshninawe@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fa fa-phone"></i>
+          <div class="info">
+            <h3>number :</h3>
+            <p>7771976134</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="https://github.com/SiddheshNinawe" class="fa fa-github"></a>
+        <a
+          href="https://www.linkedin.com/in/siddhesh-ninawe-43b035244"
+          class="fa fa-linkedin"
+        ></a>
+      </div>
+    </div>
+
+    <form method="post" action="/contact">
+      {% csrf_token %}
+
+      <div class="inputBox">
+        <input type="text" placeholder="your name" name="name" />
+        <input type="number" placeholder="your number" name="phone" />
+      </div>
+
+      <div class="inputBox">
+        <input type="email" placeholder="your email" name="email" />
+        <input type="text" placeholder="your subject" name="subject" />
+      </div>
+      <div>
+        <textarea name="message" placeholder="your message" id=""></textarea>
+      </div>
+
+      <input type="submit" value="send message" class="btn" />
+    </form>
+
+  </div>
+</section>
+
+<!-- contact section ends -->
+
+{% endblock body %}
